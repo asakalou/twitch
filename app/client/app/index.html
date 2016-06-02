@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitch Challenge</title>
+    <base href="/">
+</head>
+<body ng-cloak>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            <a class="navbar-brand navbar-logo" href="#"></a>
+        </div>
+        <div ui-view="topNav"></div>
+    </div>
+</nav>
+<div growl></div>
+<div class="container-fluid" ui-view="main"></div>
+</body>
+</html>

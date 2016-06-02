@@ -1,0 +1,33 @@
+<div class="panel panel-default channel-report">
+    <div class="panel-body">
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object channel-logo" ng-src="{{::ch.logo}}" alt="{{::ch.name}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <div>
+                                <h4 style="display: inline-block" class="media-heading">{{::ch.name}}</h4>
+                            </div>
+                            <span class="text-muted">{{::ch.game}}</span>
+                        </td>
+                        <td style="vertical-align: top; text-align: right">
+                            <div class="text-muted">
+                                <span class="label" ng-class="{'label-success': ch.status === 'LIVE', 'label-warning': ch.status === 'REPLAY', 'label-default': ch.status === 'OFFLINE'}">{{::ch.status}}</span>
+                                <span ng-if="ch.status != 'OFFLINE'">{{ch.currentViews}}</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <hr/>
+        <div class="chart"></div>
+    </div>
+</div>

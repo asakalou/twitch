@@ -1,0 +1,46 @@
+<h1>Popular Channels</h1>
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="vertical-menu-section-title">Channel Status</div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Live
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Replay
+                            </label>
+                        </div>
+                        <hr/>
+                        <div class="vertical-menu-section-title">Games</div>
+                        <div class="checkbox" ng-repeat="g in vm.games">
+                            <label>
+                                <input type="checkbox"> <img style="height: 20px" ng-src="{{g.smallImgSrc}}"> {{g.name}}
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" ui-sref-active="active"><a ui-sref="app.main.dashboard.currentViewers">Current Viewers</a></li>
+                    <li role="presentation" ui-sref-active="active"><a ui-sref="app.main.dashboard.maxViewers">Max Viewers</a></li>
+                    <li role="presentation" ui-sref-active="active"><a ui-sref="app.main.dashboard.avgViewers">Avg Viewers</a></li>
+                </ul>
+
+                <div ui-view>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

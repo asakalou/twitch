@@ -1,0 +1,27 @@
+@import "~bootstrap/less/variables.less";
+@import "variables.less";
+@import "overrides.less";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+body {
+  padding-top: @navbar-height;
+  font-weight: 300;
+}
+
+.app-page-title {
+  border-bottom: 1px solid @gray-lighter;
+  margin: 0 -15px 15px -15px;
+  padding: 0 15px;
+}
+
+.app-buttons {
+  text-align: right;
+
+  .btn + .btn {
+    margin-left: 5px;
+  }
+}
+
