@@ -31,10 +31,12 @@ public class TwitchDataPuller {
     @Autowired
     private CommonRepository commonRepository;
 
+    // todo add exiting executor service (e.g. guava)
     private final ExecutorCompletionService<Void> executorService =
             new ExecutorCompletionService<>(Executors.newFixedThreadPool(10));
 
 
+    // todo put this cons to properties file
     @Scheduled(fixedDelay = 2 * 60 * 1000)
     public void pullData() {
         logger.info("[Data Pull] Start");

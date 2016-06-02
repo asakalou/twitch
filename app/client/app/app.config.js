@@ -1,6 +1,3 @@
-/**
- * Created by asakalou on 2/14/16.
- */
 
 config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', 'growlProvider'];
 

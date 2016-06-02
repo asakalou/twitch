@@ -1,6 +1,3 @@
-/**
- * Created by asakalou on 2/15/16.
- */
 
 module.exports = {
     vendor: [
